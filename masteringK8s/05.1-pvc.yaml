@@ -1,0 +1,12 @@
+kind: PersistentVolumeClaim  
+apiVersion: v1  
+metadata:  
+  name: db-data  
+spec:  
+  # Only one node can mount the volume in Read/Write  
+  # mode at a time  
+  accessModes:  
+  - ReadWriteOnce   
+  resources:  
+    requests:  
+      storage: 2Gi  
